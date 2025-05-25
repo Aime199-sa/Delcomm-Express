@@ -17,7 +17,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 let commandes = []; // ← pour stocker les commandes temporairement
-const adminCredentials = { username: "admin", password: "admin123" }; // ← à adapter si besoin
+if (username === adminCredentials.username && password === adminCredentials.password) {
+; // ← à adapter si besoin
+if (!process.env.FIREBASE_KEY_JSON) {
+  console.error("❌ La variable FIREBASE_KEY_JSON est vide ou non définie !");
+  process.exit(1);
+}
 const produits = []; // ← à remplir plus tard si nécessaire
 
 app.post('/commande', async (req, res) => {
