@@ -6,6 +6,30 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
+const axios = require('axios');
+
+async function envoyerCommandeWhatsApp(commande) {
+  const phone = '221781313769'; // ex : 221771234567
+  const apikey = '4157800'; // reçu par WhatsApp
+  
+  const message = `🛒 NOUVELLE COMMANDE :
+Nom : ${commande.telephone}
+Adresse : ${commande.adresse}
+Livraison : ${commande.montant_livraison} FCFA
+Mode : ${commande.mode_paiement}
+Produits :
+${commande.panier.map(p => `- ${p.quantity} x ${p.name}`).join('\n')}
+`;
+
+  const url = `https://api.callmebot.com/whatsapp.php?phone=781313769&text=This+is+a+test&apikey=4157800`;
+
+  try {
+    await axios.get(url);
+    console.log("✅ Message WhatsApp envoyé !");
+  } catch (err) {
+    console.error("❌ Erreur envoi WhatsApp :", err.message);
+  }
+}
 
 // ✅ Variables mémoire
 let commandes = [];
@@ -31,6 +55,8 @@ app.post('/commande', (req, res) => {
     mode_paiement,
     date: new Date().toISOString()
   });
+  // ✅ Envoi vers WhatsApp
+  await envoyerCommandeWhatsApp(commande);
 
   res.send("1#@#Commande reçue");
 });
