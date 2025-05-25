@@ -38,15 +38,14 @@ const produits = [];
 
 // ✅ Enregistrement d'une commande
 app.post('/commande', async (req, res) => {
-  console.log("BODY REÇU:", req.body);
-
   const { panier, telephone, adresse, montant_livraison, type_adresse, mode_paiement } = req.body;
 
   if (!panier || !telephone || !adresse) {
     return res.status(400).send("0#@#Champs manquants");
   }
 
-  commandes.push({
+  // ✅ Crée un objet commande ici
+  const commande = {
     panier,
     telephone,
     adresse,
@@ -54,10 +53,15 @@ app.post('/commande', async (req, res) => {
     type_adresse,
     mode_paiement,
     date: new Date().toISOString()
-  });
-  // ✅ Envoi vers WhatsApp
+  };
+
+  // ✅ Tu peux l’enregistrer localement
+  commandes.push(commande);
+
+  // ✅ Et ensuite envoyer sur WhatsApp
   await envoyerCommandeWhatsApp(commande);
 
+  // ✅ Réponse attendue par le frontend
   res.send("1#@#Commande reçue");
 });
 
