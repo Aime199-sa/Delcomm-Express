@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const app = express();
+const twilio = require('twilio'); // ← ajouté
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
@@ -14,9 +15,15 @@ const adminCredentials = { username: "admin", password: "admin123" };
 const produits = [];
 
 // ✅ Fonction pour envoyer la commande via WhatsApp
+// ⚠️ Remplace les valeurs ci-dessous par les tiennes
+require('dotenv').config();
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = twilio(accountSid, authToken);
+
 async function envoyerCommandeWhatsApp(commande) {
-  const phone = '221781313769'; // ← ton numéro WhatsApp ici
-  const apikey = '4157800'; // ← colle ici la clé reçue par CallMeBot
+  const toWhatsApp = 'whatsapp:+221781313769'; // ← Ton numéro validé
+  const fromWhatsApp = 'whatsapp:+14155238886'; // ← Numéro Twilio sandbox
 
   const message = `🛒 NOUVELLE COMMANDE :
 Téléphone : ${commande.telephone}
@@ -28,13 +35,15 @@ Produits :
 ${commande.panier.map(p => `- ${p.quantity} x ${p.name}`).join('\n')}
 `;
 
-  const url = `https://api.callmebot.com/whatsapp.php?phone=${phone}&text=${encodeURIComponent(message)}&apikey=${apikey}`;
-
   try {
-    await axios.get(url);
-    console.log("✅ Message WhatsApp envoyé !");
+    const msg = await client.messages.create({
+      body: message,
+      from: fromWhatsApp,
+      to: toWhatsApp,
+    });
+    console.log("✅ WhatsApp envoyé via Twilio :", msg.sid);
   } catch (err) {
-    console.error("❌ Erreur envoi WhatsApp :", err.message);
+    console.error("❌ Erreur Twilio :", err.message);
   }
 }
 
