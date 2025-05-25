@@ -890,6 +890,22 @@
     };
     var montant_livraison = 1000;
 
+    $(document).ready(function () {
+    var $body = $("body");
+
+    $(".zones-button, .close-button-zones, #zones-modal-curtain").click(function (e) {
+        e.preventDefault();
+        $body.toggleClass("show-zones-modal");
+
+        if ($("#zones-modal-curtain").is(":visible")) {
+            $("#zones-modal-curtain").fadeOut(500);
+        } else {
+            $("#zones-modal-curtain").fadeIn(500);
+        }
+    });
+});
+
+
     function load(){
         if (localStorage.getItem('current_cart') !== null) {
             const current_cart = JSON.parse(localStorage.getItem('current_cart'));
