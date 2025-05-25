@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <!-- /Added by HTTrack -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Delcomm - Livraison express de produits et service à Dakar">
+        <meta name="keywords" content=""/>
+        <meta name="author" content="Delcomm"/>
+        <title>Delcomm</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="media/favicon.png">
+        <!-- All CSS files -->
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/vendor/all.min.css">
+        <link rel="stylesheet" href="css/vendor/ion.rangeSlider.css">
+        <link rel="stylesheet" href="css/vendor/slick.css">
+        <link rel="stylesheet" href="css/vendor/slick-theme.css">
+        <link rel="stylesheet" href="css/vendor/nice-select.css">
+        <link rel="stylesheet" href="css/vendor/odometer.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link href="css/jquery.toast.min.css" rel="stylesheet" type="text/css">
+        <link href="js/vendor/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+        <style type="text/css">.delete-product:hover { cursor: pointer; }</style>
+        <style>#map { height: 200px; width: 100%; display: none; } #type_adresse_container:hover { cursor: pointer; } .floating-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1050; width: 50px; height: 50px; line-height: 2.5; } .floating-btn-wha { position: fixed; bottom: 80px; right: 20px; z-index: 1050; width: 50px; height: 50px; line-height: 2.5; }</style>
+    </head>
+    <body id="body" class="x-hidden" onload="load();">
+        <a href="javascript:void(0);" id="open_cart_button" class="btn btn-primary rounded-circle floating-btn cart-button" style="background-color: #ed7700;"> <i class="fa-regular fa-cart-shopping"></i> </a>
+        <a href="https://wa.me/+221781313769" style="background-color: #0aab03; color: #fffffe;" target="_blank" class="btn rounded-circle floating-btn-wha"> <i class="fab fa-whatsapp"></i> </a>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src=""></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="loading">
+                <span data-text="D">D</span>
+                <span data-text="E">E</span>
+                <span data-text="L">L</span>
+                <span data-text="C">C</span>
+                <span data-text="O">O</span>
+                <span data-text="M">M</span>
+                <span data-text="M">M</span>
+            </div>
+            <!-- <img src="media/icons/logo-vector.png" alt="" class="logo-bottom-vector"> -->
+        </div>
+        <div id="loader-overlay" class="hidden" style="display: none;">
+            <div class="loader"></div>
+            <p class="loader-text">
+            Votre commande en cours de traitement<br>
+            Veuillez patienter </p>
+        </div>
+        <!--  Begin scroll container -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content" class="x-hidden">
+                <main>
+                    <!-- Hero Section Start -->
+                    <section class="hero-banner-1" id="hero">
+                        <!-- Header start -->
+                        <header id="ui-header">
+                            <div class="ui-header-inner container-fluid"> 
+                                <div class="ui-header-col">
+                                    <div class="ui-logo"> <a href="index-2.html"> <img src="media/logo.png"> <!-- logo light --> </a>
+                                    </div>
+                                </div>
+                                <div class="ui-header-col white-bg" style="margin-right: 10px;">
+                                    <span><i class="fa-regular fa-phone"></i> +221 78 131 37 69</span>
+                                </div>
+                                <div class="ui-header-col white-bg">
+                                    <!-- Being header tools -->
+                                    <div class="ui-header-tools">
+                                        <!-- <a href="javascript:;" class="ui-header-tools-item search-toggler"><i class="fa-regular fa-magnifying-glass"></i></a> -->
+                                        <!-- <a href="signup.html" class="ui-header-tools-item"><i class="fa-regular fa-user">+221 429 72 72</i></a> -->
+                                        <a href="javascript:;" class="ui-header-tools-item cart-button"><i class="fa-regular fa-cart-shopping"></i></a>
+                                    </div>
+                                    <!-- End header tools -->
+                                </div>                                 
+                            </div>                             
+                        </header>
+                        <!-- Header End -->
+                        <div class="content">
+                            <div class="text-block">
+                                <!-- <p class="eyebrow ">— Something Spicy</p> -->
+                                <div class="title-block">
+                                    <h1 class="banner-title mb-16">Tout ce qu’il vous faut, en un clic</h1>
+                                </div>
+                                <p class="description" style="color: hsl(30, 100%, 50%);">
+                                Découvrez Delcomm, votre service de livraison rapide et abordable ! </p>
+                                <div class="order">
+                                    <a href="javascript:;" onclick="scrollToSection();" class="cus-btn primary-banner">Commander maintenant</a>
+                                </div>
+                                <!-- <img src="media/banner/banner-1/elements-1.png" alt="" class="element-vector"> -->
+                            </div>
+                        </div>
+                        <div class="image-block">
+                            <div class="images">
+                                <div class="img img-1">
+                                    <img src="media/banner/banner-1/product-large-1.png" alt="">
+                                </div>
+                                <div class="img img-2">
+                                    <img src="media/banner/banner-1/product-large-2.png" alt="">
+                                </div>
+                                <div class="img img-3">
+                                    <img src="media/banner/banner-1/product-large-4.png" alt="">
+                                </div>
+                                <div class="img img-4">
+                                    <img src="media/banner/banner-1/product-large-3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Hero Section End -->                     
+                    <!-- Start Page Content -->
+                    <div class="page-content"> 
+                        <!-- Presentation service Section Start -->                         
+                        <section class="py-40 customized_burger">
+                            <div class="container-fluid">
+                                <div class="d-flex mb-48">
+                                    <div class="heading">
+                                        <p class="eyebrow " style="color: hsl(30, 100%, 50%);">— Un service rapide et fiable</p>
+                                        <h2 class="title">Comment <span class="h2" style="color: hsl(30, 100%, 50%);">&ccedil;a marche ?</span></h2>
+                                    </div>
+                                </div>
+                                <!-- Products List -->
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center">
+                                            <div class="product-img mb-16">
+                                                <img src="media/steps/je-passe-ma-commande.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title" style="color: hsl(30, 100%, 50%);">1- Je passe ma commande</a>
+                                            <p class="desc">En 2 &eacute;tapes gr&acirc;ce &agrave; un processus de commande hyper simplifi&eacute;</p>
+                                            <p>&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center">
+                                            <div class="product-img mb-16">
+                                                <img src="media/steps/ma-commande-est-validee.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title" style="color: hsl(30, 100%, 50%);">2- Ma commande est valid&eacute;e </a>
+                                            <p style="margin-bottom: 0;" class="desc">Un agent Delcomm prend contact avec vous dans les 10 minutes suivants votre commande pour confirmer votre commande et au besoin recueillir des précisions sur l'adresse pour faciliter la livraison</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 mb-32 mb-sm-0">
+                                        <div class="product-card text-center">
+                                            <div class="product-img mb-16">
+                                                <img src="media/steps/je-recoit-ma-commande-en-2-heures.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title" style="color: hsl(30, 100%, 50%);">3- Je re&ccedil;ois ma commande en 2h<sup>*</sup></a>
+                                            <p style="margin-bottom: 0;" class="desc">
+                                            Un livreur prend contact avec vous &agrave; son arriv&eacute;e &agrave; l'adresse de livraison. <br><span>*Sous r&eacute;serve de l'&eacute;ligibilit&eacute;e de ma zone.</span> <!-- <br><a href="javascript:;" class="search-toggler">Voir les zones &eacute;ligibles</a>  --> <br><a href="javascript:void(0);" class="zones-button">Voir les zones &eacute;ligibles</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Presentation service Section End -->
+                        <!-- Selection de produit Section Start -->                         
+                        <section class="py-80" id="liste_produits">
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-between align-items-sm-center align-items-end mb-48">
+                                    <div class="heading">
+                                        <p class="eyebrow " style="color: hsl(30, 100%, 50%);">— De quoi avez-vous besoin ?</p>
+                                        <h3 class="title">Notre <span class="h3">S&eacute;lection de produits</span></h3>
+                                    </div>
+                                    <!-- <a href="shop-grid-right-sidebar.html" class="cus-btn dark d-sm-flex d-none">
+                                    <span class="icon-wrapper">
+                                        <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.2522 11.9789C14.4658 10.1925 13.7513 6.14339 15.6567 4.23792M15.6567 4.23792C14.565 5.3296 11.4885 7.21521 7.91576 3.64246M15.6567 4.23792L4.34301 15.5516" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg class="icon-svg icon-svg-copy" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.2522 11.9789C14.4658 10.1925 13.7513 6.14339 15.6567 4.23792M15.6567 4.23792C14.565 5.3296 11.4885 7.21521 7.91576 3.64246M15.6567 4.23792L4.34301 15.5516" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    Voir tous les produits
+                                </a> -->
+                                </div>
+                                <!-- Products List -->
+                                <div class="row mt-24"> 
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="1" data-product-ref="KIRENE10">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/KIRENE10.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Durex Extra</a>
+                                            <a href="javascript:void(0);" class="h5 title"></a>
+                                            <a href="javascript:void(0);" class="h5 title"></a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>1 500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="2" data-product-ref="CASAMANCAISE10">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/CASAMANCAISE10.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Gel Manix Lubrifiant</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>1 000 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU19" data-product-id="3" data-product-ref="BAEAUBAB19">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/BAEAUBAB19.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Durex Play</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>2 000 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU19" data-product-id="4" data-product-ref="BAEAUBAB19-2">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/BAEAUBAB19-2.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Procomyl Spray</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>7 000 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-24"> 
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="GAZ12" data-product-id="5" data-product-ref="TOTAL12KG">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/TOTAL12KG.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Ella One Pillule</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>6 250 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="GAZ12" data-product-id="6" data-product-ref="TOTAL12KG-2">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/TOTAL12KG-2.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Manix pack 14</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>20 250 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="7" data-product-ref="CASAMANCAISE1_5">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/CASAMANCAISE1_5.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Kiss Fraise</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="8" data-product-ref="CASAMANCAISE0_5">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/CASAMANCAISE0_5.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Kiss Banana</a>&nbsp;
+                                            <div>
+                                                <p><br></p>
+                                                <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                                <div class="action-block">
+                                                    <div class="quantity quantity-wrap">
+                                                        <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                        </div>
+                                                        <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                        <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price-cart">
+                                                        <h5>500 FCFA</h5>
+                                                        <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-24"> 
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="9" data-product-ref="CASAMANCAISE0_3">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/CASAMANCAISE0_3.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Kiss Menthe</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="10" data-product-ref="KIRENE1_5">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/KIRENE1_5.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Kiss Naturel</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="11" data-product-ref="KIRENE0_5">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/KIRENE0_5.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Lubrifiant Manix </a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU10" data-product-id="12" data-product-ref="KIRENE0_3">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/KIRENE0_3.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Anneau Vibrant manix </a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>1 500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-24"> 
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU19" data-product-id="13" data-product-ref="MIYA19">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/MIYA19.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Ella Test </a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>1 500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="EAU19" data-product-id="14" data-product-ref="MIYA19-2">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/MIYA19-2.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Kiss Extra Plaisir   </a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>3 500 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="GAZ12" data-product-id="15" data-product-ref="TOTAL9KG">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/TOTAL9KG.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Durex Extra Felling</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>4 290 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="product-card text-center" data-product-type="GAZ12" data-product-id="16" data-product-ref="TOTAL9KG-2">
+                                            <div class="product-img mb-16">
+                                                <img src="media/products/small/TOTAL9KG-2.png" style="width: 100px;" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h5 title">Norlevo 72h</a>
+                                            <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.</p> -->
+                                            <div class="action-block">
+                                                <div class="quantity quantity-wrap">
+                                                    <div class="decrement"><i class="fa-solid fa-dash"></i>
+                                                    </div>
+                                                    <input type="text" name="quantity" value="1" maxlength="2" size="1" class="number">
+                                                    <div class="increment"><i class="fa-solid fa-plus-large"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="price-cart">
+                                                    <h5>1 590 FCFA</h5>
+                                                    <a href="javascript:;" class="cart-btn cart-button product-button"><img src="media/icons/shopping-cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </section>
+                        <!-- Selection de produit Section End -->                         
+                        <!-- Pourquoi nous choisir Start -->                         
+                        <section class="py-80">
+                            <div class="container-fluid">
+                                <div class="d-flex justify-content-between align-items-sm-center align-items-end mb-48">
+                                    <div class="heading">
+                                        <p class="eyebrow " style="color: hsl(30, 100%, 50%);">— Les avantages de choisir Delcomm</p>
+                                        <h3 class="title">Pourquoi <span class="h3">Commander avec Delcomm ?</span></h3>
+                                    </div>
+                                </div>
+                                <!-- Products List -->
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="type-card-1">
+                                            <div class="img-block">
+                                                <img src="media/products/livraison-rapide.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h4 title">Livraison rapide, &agrave; votre porte en un clin d'&oelig;il </a>
+                                            <img src="media/vector/cc-vector.png" alt="" class="title-bg-vec">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="type-card-1">
+                                            <div class="img-block">
+                                                <img src="media/products/processus-de-commande-simple.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h4 title">Processus de commande simple et efficace</a>
+                                            <img src="media/vector/cc-vector.png" alt="" class="title-bg-vec">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 mb-32 mb-lg-0">
+                                        <div class="type-card-1">
+                                            <div class="img-block">
+                                                <img src="media/products/qualite-constante.png" alt="">
+                                            </div>
+                                            <a href="javascript:void(0);" class="h4 title">Qualit&eacute; constante pour votre tranquilit&eacute; d'esprit</a>
+                                            <img src="media/vector/cc-vector.png" alt="" class="title-bg-vec">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Pourquoi nous choisir End -->                         
+                        <!-- Brands Section Start -->                         
+                        <div class="brands py-80">
+                            <div class="container-fluid">
+</div>
+                        </div>
+                        <!-- Brands Section End -->
+                    </div>                     
+                    <!-- End Page Content -->
+                    <!-- Footer Area Start -->
+                    <footer>
+                        <div class="footer-main">
+                            <!-- <img src="media/bg/footer-bg.png" alt="" class="footer-bg-vetor"> -->
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6">
+                                        <ul class="footer-nav unstyled mb-xl-0 mb-32">
+                                            <!-- <li><a href="index.php">Accueil</a></li> -->
+                                            <!-- <li><a href="menu.html">Produits</a></li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <ul class="social-icons-list unstyled">
+                                            <li><a href="#"><img src="media/icons/Facebook.svg" alt=""></a>
+                                            </li>
+                                            <!-- <li><a href="#"><img src="media/icons/Twitter.svg" alt=""></a></li> -->
+                                            <li><a href="#"><img src="media/icons/Instagram.svg" alt=""></a>
+                                            </li>
+                                            <li><a href="#"><img src="media/icons/Linkedin.svg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <div class="container-fluid">
+                                <div class="bottom-row">
+                                    <div class="copyright-text">
+                                        <!-- <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+                                            © 2025. Tous droits r&eacute;serv&eacute;s par <a href="index.php">Delcomm</a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+                                            T&eacute;l : +221 78 429 72 72
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+                                            Email : commercial@Delcomm.com
+                                        </div>
+                                        
+                                    </div> -->
+                                        <p>© 2025. Tous droits r&eacute;serv&eacute;s par <a href="index-2.html">Delcomm</a></p>
+                                        <!-- <p>© 2025. Tous droits r&eacute;serv&eacute;s par <a href="index.php">Delcomm</a> - T&eacute;l : +221 78 131 37 69 - Email : commercial@Delcomm.com</p> -->
+                                    </div>
+                                    <div class="right-block">
+                                        <a href="#">+221 78 131 37 69</a>
+                                        <a href="#">commercial@Delcomm.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- Footer Area end -->
+                </main>
+            </div>
+            <!-- End content wrap -->
+        </div>
+        <!-- End scroll container -->
+        <!-- Search Popup Start -->
+        <div class="search-popup">
+            <div class="search-popup__overlay search-toggler"></div>
+            <div class="search-popup__content text-center">
+                <form role="search" method="get" class="search-popup__form" action="https://uiparadox.co.uk/public/templates/royalfare/v2/shop-list-1.html">
+                    <div>
+                        <p><strong>Zones &eacute;ligible &agrave; la livraison en 2h</strong></p>
+                        <p>
+                        DAKAR-PLATEAU, MEDINA, GUEULE TAPEE, FASS, FANN/POINT E/ AMITIE, GRAND DAKAR, BISCUITERIE, HLM, HANN/ BEL AIR, SICAP LIBERTE, DIEUPPEUL DERKLE, OUAKAM, N’GOR, YOFF, Almadies, MERMOZ/ SACRE -COEUR, GRAND YOFF, PATTE D’OIE, PARCELLES ASSAINIES </p>
+                        <!-- <ul>
+                        <li>DAKAR-PLATEAU</li>
+                        <li>MEDINA</li>
+                        <li>GUEULE TAPEE</li>
+                        <li>FASS</li>
+                        <li>FANN/POINT E/ AMITIE</li>
+                        <li>GRAND DAKAR</li>
+                        <li>BISCUITERIE</li>
+                        <li>HLM</li>
+                        <li>HANN/ BEL AIR</li>
+                        <li>SICAP LIBERTE</li>
+                        <li>DIEUPPEUL DERKLE</li>
+                        <li>OUAKAM</li>
+                        <li>N’GOR</li>
+                        <li>YOFF</li>
+                        <li>Almadies</li>
+                        <li>MERMOZ/ SACRE -COEUR</li>
+                        <li>GRAND YOFF</li>
+                        <li>PATTE D’OIE</li>
+                        <li>PARCELLES ASSAINIES</li>
+                    </ul> -->
+                        <!-- <strong>Cette liste est r&eacute;guli&egrave;rement mise &agrave; jour</strong> -->
+                        <!-- <p>Indiquez votre lieu de r&eacute;sidence et votre nu&eacute;ro de t&eacute;l&eacute;phone pour &ecirc;tre inform&eacute; de &eacute;ligibilit&eacute; de votre zone</p> -->
+                    </div>
+                    <!-- <div class="blur-layer">
+                    <input type="text" id="search" autocomplete="off" placeholder="Search Here...">
+                    
+                </div> -->
+                    <!-- <button type="submit"><i class="fal fa-search"></i></button> -->
+                </form>
+            </div>
+        </div>
+        <!-- Search Popup End -->
+        <style type="text/css">#loader-overlay { position: fixed;  /* Ensure it covers the entire page */ top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.9);  /* Semi-transparent background */ display: none;  /* Hidden by default */ justify-content: center; align-items: center; z-index: 999999; display: flex; flex-direction: column; } .loader { border: 4px solid #FFFFFF; border-top: 4px solid #0744AA; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; } .loader-text { margin-top: 20px;  /* Add space between loader and text */ font-size: 18px; color: #333; text-align: center;  /* Center the text */ color: #FFFFFF; } @keyframes spin { 0% {  transform: rotate(0deg); }  100% {  transform: rotate(360deg); } } /* Optional: Styling the body when the loader is active */body.loading { overflow: hidden;  /* Prevent scrolling while loading */ }</style>
+        <aside id="sidebar-cart">
+            <form id="order_form">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5>Votre panier</h5>
+                    <a href="#" class="close-button"><i class="fa-regular fa-xmark close-icon"></i></a>
+                </div>
+                <p class="vr-line"></p>
+                <div class="content" id="cart_content" style="padding-bottom: 13vh;">
+                    <ul class="product-list">
+                        <!-- Produits ici -->
+                    </ul>
+                    <div class="mb-24">
+                        <strong>Le prix de la livraison d&eacute;pend de la quantit&eacute; de produits command&eacute;e</strong>
+                    </div>
+                    <div class="price-total mb-24">
+                        <h6>Livraison</h6>
+                        <h5 class="color-primary" id="montant_livraison">--</h5>
+                    </div>
+                    <div class="price-total mb-24">
+                        <h6>Total</h6>
+                        <h5 class="color-primary" id="montant_total">--</h5>
+                    </div>
+                    <div class="vr-line mb-24"></div>
+                    <div>
+                        <div class="row mb-16">
+                            <div class="col-6">
+                                <div class="form-group mb-32">
+                                    <label for="telephone">N&deg; de t&eacute;l&eacute;phone</label>
+                                    <input autocomplete="true" type="tel" name="telephone" id="telephone" placeholder="77 000 00 00" pattern="^\d{2} \d{3} \d{2} \d{2}$" title="Le n&deg; de t&eacute;l&eacute;phone doit &ecirc;tre au format XX XXX XX XX" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="">
+                                    <div class="widget-title-row mb-8">
+                                        <label style="color:#282525; font-weight: 500;">Mode de paiement</label>
+                                        <!-- <span><i class="fa-light fa-horizontal-rule"></i></span> -->
+                                    </div>
+                                    <div class="widget-content-block">
+                                        <ul class="filter-list unstyled">
+                                            <li>
+                                                <div class="filter-checkbox">
+                                                    <input type="radio" name="mode_paiement" id="livraison" value="LIVRAISON" required>
+                                                    <label for="livraison">&Agrave; la livraison</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="filter-checkbox">
+                                                    <input type="radio" name="mode_paiement" id="wave" value="WAVE" required>
+                                                    <label for="wave">Wave</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h6 class="">Adresse</h6>
+                            <div class="col-xs-6 col-md-5">
+                                <a href="javascript:void(0);" class="cus-btn outline dark" id="get-location">Choisir sur une carte</a>
+                                <!-- Partager ma position -->
+                            </div>
+                            <div id="type_adresse_container" class="col-xs-6 col-md-7" style="line-height: 30px; margin-bottom: 15px;">
+                                <input type="checkbox" id="type_adresse" value="type_adresse" onclick="show_hide_adress_field();">
+                                <label style="font-size: 1rem; font-weight: bold; color: #000000;" for="type_adresse">Je pr&eacute;f&egrave;re saisir une adresse</label>
+                            </div>
+                        </div>
+                        <!-- <p>
+                        
+                    </p> -->
+                        <div id="map"></div>
+                        <div class="row mt-3" id="address_field" style="display: none;">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="adresse">Veuillez saisir votre adresse</label>
+                                    <textarea maxlength="300" name="adresse" id="adresse" rows="2" placeholder="Liberté 5, derrière Big Bazar Allemand"></textarea>
+                                    <input type="hidden" name="adresse_map" id="adresse_map" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-line mb-24"></div>
+                </div>
+                <!-- Footer fixe -->
+                <div class="footer">
+                    <div class="action-buttons" style="justify-content: center;">
+                        <button type="submit" onclick="submit_order();" class="cus-btn dark" style="background-color: #f57a35;">
+                            <span class="icon-wrapper"> <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.2522 11.9789C14.4658 10.1925 13.7513 6.14339 15.6567 4.23792M15.6567 4.23792C14.565 5.3296 11.4885 7.21521 7.91576 3.64246M15.6567 4.23792L4.34301 15.5516" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> <svg class="icon-svg icon-svg-copy" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.2522 11.9789C14.4658 10.1925 13.7513 6.14339 15.6567 4.23792M15.6567 4.23792C14.565 5.3296 11.4885 7.21521 7.91576 3.64246M15.6567 4.23792L4.34301 15.5516" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> </span>
+                            Valider la commande
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </aside>
+        <div id="sidebar-cart-curtain"></div>
+        <!-- Mini Cart End -->
+        <!-- Zones modal -->
+        <div id="zones-modal">
+            <form>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5>Zones &eacute;ligibles &agrave; la livraison en 2h</h5>
+                    <a href="#" class="close-button-zones"><i class="fa-regular fa-xmark close-icon"></i></a>
+                </div>
+                <p class="vr-line"></p>
+                <div class="content">
+                    <ul>
+                        <li>DAKAR-PLATEAU</li>
+                        <li>MEDINA</li>
+                        <li>GUEULE TAPEE</li>
+                        <li>FASS</li>
+                        <li>FANN/POINT E/ AMITIE</li>
+                        <li>GRAND DAKAR</li>
+                        <li>BISCUITERIE</li>
+                        <li>HLM</li>
+                        <li>HANN/ BEL AIR</li>
+                        <li>SICAP LIBERTE</li>
+                        <li>DIEUPPEUL DERKLE</li>
+                        <li>OUAKAM</li>
+                        <li>N’GOR</li>
+                        <li>YOFF</li>
+                        <li>Almadies</li>
+                        <li>MERMOZ/ SACRE -COEUR</li>
+                        <li>GRAND YOFF</li>
+                        <li>PATTE D’OIE</li>
+                        <li>PARCELLES ASSAINIES</li>
+                    </ul>
+                    <div class="vr-line mb-24"></div>
+                </div>
+                <!-- Footer fixe -->
+                <div class="footer">
+                    <div class="action-buttons" style="justify-content: center;">
+                        <button type="button" class="cus-btn dark close-button-zones" style="box-shadow: none; padding: 1vw 4vw 1vw 4vw;">
+                            Fermer
+</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="zones-modal-curtain"></div>
+        <!-- Zones modal End -->
+        <!-- Jquery Js -->
+        <script src="js/vendor/jquery-3.6.3.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/gsap.min.js"></script>
+        <script src="js/vendor/scrollTrigger.min.js"></script>
+        <script src="js/vendor/ScrollToPlugin.min.js"></script>
+        <script src="js/vendor/ScrollSmoother.min.js"></script>
+        <script src="js/vendor/jquery-appear.js"></script>
+        <script src="js/vendor/jquery-validator.js"></script>
+        <script src="js/vendor/ion.rangeSlider.js"></script>
+        <script src="js/vendor/jquery.nice-select.min.js"></script>
+        <script src="js/vendor/slick.min.js"></script>
+        <script src="js/vendor/odometer.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/jquery.toast.min.js"></script>
+        <script src="js/vendor/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var $body = $("body");
+
+        $(".zones-button, .close-button-zones, #zones-modal-curtain").click(function (e) {
+            // console.log("clicked");
+          e.preventDefault();
+
+          $body.toggleClass("show-zones-modal");
+
+          if ($("#zones-modal-curtain").is(":visible")) {
+            $("#zones-modal-curtain").fadeOut(500);
+          } else {
+            $("#zones-modal-curtain").fadeIn(500);
+          }
+        });
+    });
+
+    window.already_loaded = 0;
+    let cart = [];
+    var commande = {
+        "panier":[],
+        "telephone": "",
+        "adresse": "",
+        "type_adresse": "",
+        "montant_livraison": ""
+    };
+    var montant_livraison = 1000;
+
+    $(document).ready(function() {
+        $.ajax({
+            type: "POST",
+            url: "apipub/auth", 
+            data: '',
+            success: function(msg){
+                var rep = msg.split("#@#");
+                if(parseInt(rep[0])==1){
+                    // console.log("t ok");
+                }
+                else{ 
+                    // console.log("something went wrong")
+                }
+                // console.log(msg);
+            },
+            error: function(xhr, status, error) {
+                console.error("Error Details:");
+                console.error("Status: " + status);  // HTTP status code (e.g., 404, 500)
+                console.error("Error: " + error);  // Error message if available
+                console.error("Response Text: " + xhr.responseText);  // The response text from the server
+                alert("An error occurred while processing the request.");
+              }
+            
+        });
+            });
+
+    function load(){
+        if (localStorage.getItem('current_cart') !== null) {
+            const current_cart = JSON.parse(localStorage.getItem('current_cart'));
+            cart = current_cart.panier;
+            if(window.already_loaded != 1)
+                updateCartUI();
+        }
+
+        
+    }
+    $('#order_form').on('submit', function(e) {
+        e.preventDefault(); 
+        // var donnees = $(this).serialize();
+    });
+
+    $(document).on('input', '#telephone', function() {
+        var phoneNumber = $(this).val().replace(/\D/g, ''); // Remove non-digits
+        if (phoneNumber.length <= 2) {
+          phoneNumber = phoneNumber.replace(/(\d{1,2})/, '$1');
+        } else if (phoneNumber.length <= 5) {
+          phoneNumber = phoneNumber.replace(/(\d{2})(\d{1,3})/, '$1 $2');
+        } else if (phoneNumber.length <= 7) {
+          phoneNumber = phoneNumber.replace(/(\d{2})(\d{3})(\d{1,2})/, '$1 $2 $3');
+        } else {
+          phoneNumber = phoneNumber.replace(/(\d{2})(\d{3})(\d{2})(\d{1,2})/, '$1 $2 $3 $4');
+        }
+        $(this).val(phoneNumber);
+    });
+
+    function show_hide_adress_field() {
+      if ($('#type_adresse').prop('checked')) {
+        $('#address_field').show();
+        $("#adresse").attr("required", true);
+        $('#map').hide();
+        const targetSection = document.querySelector("#cart_content");
+        targetSection.scrollTo({
+            top: targetSection.scrollHeight,  // Scroll jusqu'en bas de la div
+            behavior: 'smooth'  // Défilement fluide
+        });
+      } else {
+        $('#address_field').hide();
+        $("#adresse").removeAttr("required");
+        // $('#map').show();
+      }
+    }
+
+    function submit_order(){
+        var loaderOverlay = document.getElementById("loader-overlay");
+
+    let position = null;
+    if (typeof marker !== 'undefined' && typeof marker.getPosition === 'function') {
+        position = marker.getPosition();
+        if (position.lat() != 48.8566) {
+            $("#adresse_map").attr("value", `${position.lat()}, ${position.lng()}`);
+
+            if($("#telephone").val().length > 8 && $('input[name="mode_paiement"]:checked').length > 0 && (($("#adresse").val().length > 2 && $('#type_adresse').prop('checked')) || ($("#adresse_map").attr("value").length > 2 && !$('#type_adresse').prop('checked'))) && cart.length > 0){
+                // console.log("OK, good to go");
+                loaderOverlay.style.display = "flex";
+                commande.montant_livraison = montant_livraison;
+                commande.panier = cart;
+                commande.telephone = $("#telephone").val();
+                if(($("#adresse").val().length > 2 && $('#type_adresse').prop('checked'))){
+                    commande.adresse = $("#adresse").val();
+                    commande.type_adresse = 'SAISIE';
+                }
+                else if ($("#adresse_map").attr("value").length > 2 && !$('#type_adresse').prop('checked')){
+                    commande.adresse = $("#adresse_map").attr("value");
+                    commande.type_adresse = 'GPS';
+                }
+
+                commande.mode_paiement = $('input[name="mode_paiement"]:checked').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "apipub/add_order", //process to mail
+                    // contentType: "application/json; charset=utf-8",
+                    data: {commande: JSON.stringify(commande)},
+                    success: function(msg){
+                        var rep = msg.split("#@#");
+                        if(parseInt(rep[0])==1){
+                            // // console.log("ok, all good");
+                            /*var $body = $("body");
+                            $body.toggleClass("show-sidebar-cart");
+
+                            if ($("#sidebar-cart-curtain").is(":visible")) {
+                                $("#sidebar-cart-curtain").fadeOut(500);
+                            } else {
+                                $("#sidebar-cart-curtain").fadeIn(500);
+                            }*/
+                            swal({ title: "Super !", text: "Votre commande a bien été prise en compte", imageUrl: 'media/success.png', html: true}, function() {location.reload(); });
+                            $(document).click(function(){
+                                // location.reload();
+                            });
+                            $(".close-button").trigger("click");
+                            $('#order_form')[0].reset();
+                            $('#map').hide();
+                            cart = [];
+                            localStorage.removeItem('current_cart');
+                            updateCartUI();
+                        }
+                        else if(parseInt(rep[0])==2){
+                            // swal({ title: "Super !", text: "Votre session a expiré", imageUrl: 'media/success.png', html: true});
+                            // , function() {location.reload(); }
+                            swal({title: "Désolé", text: "Votre session a expiré. Nous allons recharger cette page.", type: "error"}, function() {location.reload(); });
+                            $(document).click(function(){
+                                // location.reload();
+                            });
+                        }
+                        else{ 
+                            // console.log("something went wrong")
+                        }
+                        // console.log(msg);
+                        loaderOverlay.style.display = "none";
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error Details:");
+                        console.error("Status: " + status);  // HTTP status code (e.g., 404, 500)
+                        console.error("Error: " + error);  // Error message if available
+                        console.error("Response Text: " + xhr.responseText);  // The response text from the server
+                        alert("An error occurred while processing the request.");
+                        $('.loaderMessage').removeClass('is-active');
+                        loaderOverlay.style.display = "none";
+                    }
+                    
+                });
+                /*$.ajax({
+                    type: "POST",
+                    url: "apipub/add_order", // Assurez-vous que cette URL est correcte
+                    contentType: "application/json",
+                    data: JSON.stringify({ commande: commande }),
+                    success: function(msg) {
+                        // console.log(msg);
+                        loaderOverlay.style.display = "none";
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error Details:");
+                        console.error("Status: " + status);  // HTTP status code (e.g., 404, 500)
+                        console.error("Error: " + error);  // Error message if available
+                        console.error("Response Text: " + xhr.responseText);  // The response text from the server
+                        alert("An error occurred while processing the request.");
+                        $('.loaderMessage').removeClass('is-active');
+                        loaderOverlay.style.display = "none";
+                    }
+                });*/
+
+            }else{
+                if($("#telephone").val().length <= 8){
+                    // // console.log("Veuillez saisir un numero de telephone");
+                    $.toast({
+                      text: 'Veuillez saisir un numero de téléphone',
+                      position: 'top-right',
+                      loaderBg:'#000000',
+                      bgColor: '#000000',
+                      // icon: 'info',
+                      hideAfter: 5000, 
+                      stack: 6
+                    });
+                }
+                else if(($("#adresse").val().length <= 2 && $('#type_adresse').prop('checked')) || ($("#adresse_map").attr("value").length <= 2 && !$('#type_adresse').prop('checked'))){
+                    // // console.log("Veuillez saisir une adresse");
+                    $.toast({
+                      text: 'Veuillez saisir une adresse ou en choisir une sur la carte',
+                      position: 'top-right',
+                      loaderBg:'#000000',
+                      bgColor: '#000000',
+                      // icon: 'info',
+                      hideAfter: 5000, 
+                      stack: 6
+                    });
+                }
+                else if(cart.length <= 0){
+                    // // console.log("Votre panier est vide");
+                    $.toast({
+                      text: 'Votre panier est vide',
+                      position: 'top-right',
+                      loaderBg:'#000000',
+                      bgColor: '#000000',
+                      // icon: 'info',
+                      hideAfter: 5000, 
+                      stack: 6
+                    });
+                }else if (!$('input[name="mode_paiement"]:checked').length) {
+                    $.toast({
+                      text: 'Veuillez sélectionner un mode de paiement',
+                      position: 'top-right',
+                      loaderBg:'#000000',
+                      bgColor: '#000000',
+                      // icon: 'info',
+                      hideAfter: 5000, 
+                      stack: 6
+                    });
+                }
+                const targetSection = document.querySelector("#cart_content");
+                targetSection.scrollTo({
+                    top: targetSection.scrollHeight,  // Scroll jusqu'en bas de la div
+                    behavior: 'smooth'  // Défilement fluide
+                });
+            }
+                setTimeout(function() {
+            loaderOverlay.style.display = "none"; 
+        }, 3000);
+        
+    }
+    function scrollToSection() {
+        const targetSection = document.querySelector("#liste_produits");
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop, // Position de la section cible
+                behavior: 'smooth' // Défilement fluide
+            });
+        }
+    }
+    
+    // Function to add a product to the cart
+    function addProduct(product) {
+        const existingProduct = cart.find(item => item.id == product.id);
+        if (existingProduct) {
+            existingProduct.quantity += product.quantity;
+        } else {
+            cart.push(product);
+        }
+        updateCartUI();
+    }
+
+    // Function to update product quantity
+    function updateProductQuantity(productId, action) {
+        var quantity = document.getElementById(`quantity_${productId}`).value;
+        if(action == 'plus')
+            quantity = parseInt(quantity) + 1;
+        else if(action == 'moins')
+            if(parseInt(quantity) > 1)
+                quantity = parseInt(quantity) - 1;
+        else if(action == 'entered')
+            quantity = quantity;
+
+        const product = cart.find(item => item.id == productId);
+        if (product) {
+            product.quantity = quantity;
+        }
+        updateCartUI("SET_QUANTITY");
+        document.getElementById(`quantity_${productId}`).value = quantity;
+    }
+
+    // Function to delete a product from the cart
+    function deleteProduct(productId) {
+        cart = cart.filter(item => item.id != productId);
+        updateCartUI("REMOVE_PRODUCT");
+        var itemToRemove = document.getElementById(`node_${productId}`);
+        if (itemToRemove) {
+            itemToRemove.parentNode.removeChild(itemToRemove);
+        }
+
+        var separatorToRemove = document.getElementById(`node_separator${productId}`);
+        if (separatorToRemove) {
+            separatorToRemove.parentNode.removeChild(separatorToRemove);
+        }
+    }
+
+    // Function to calculate the total price
+    function calculateTotal(montant_livraison) {
+        return cart.reduce((total, item) => total + item.price * item.quantity, 0) + montant_livraison;
+    }
+
+    // Function to handle checkout
+    function checkout(montant_livraison) {
+        const orderDetails = {
+            products: cart,
+            total: calculateTotal(montant_livraison)
+        };
+        // console.log(JSON.stringify(orderDetails, null, 2));
+    }
+
+    function updateCartUI(action="LOAD_ALL") {
+        montant_livraison = 1000;
+
+        if(action == "LOAD_ALL"){
+            const productList = document.querySelector('.product-list');
+            productList.innerHTML = '';
+            cart.forEach(product => {
+                if (!document.getElementById(`node_${product.id}`)) {
+                    const productItem = document.createElement('li');
+                    productItem.classList.add('product-item', 'mb-24');
+                    productItem.id = `node_${product.id}`;
+
+                    productItem.innerHTML = `
+                        <a href="javascript:void(0);">
+                            <span class="item-image">
+                                <img src="media/products/small/${product.ref}.png" alt="Product Photo">
+                            </span>
+                        </a>
+                        <div class="product-text">
+                            <a href="javascript:void(0);">
+                                <h6 class="mb-16 dark-gray">${product.name}</h6>
+                            </a>
+                            <div class="qp_row">
+                                <div class="quantity quantity-wrap">
+                                    <div class="decrement" onclick="updateProductQuantity(${product.id}, 'moins')"><i class="fa-solid fa-dash"></i></div>
+                                    <input type="text" min="1" max="10" id="quantity_${product.id}" name="quantity" value="${product.quantity}" maxlength="2" size="1" class="number" onchange="updateProductQuantity(${product.id}, 'entered')">
+                                    <div class="increment" onclick="updateProductQuantity(${product.id}, 'plus')"><i class="fa-solid fa-plus-large"></i></div>
+                                </div>
+                                <h5 class="dark-gray">${product.price} FCFA</h5>
+                                <div class="delete-product" onclick="deleteProduct(${product.id})">
+                                    <i class="fa-solid fa-trash"></i>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    productList.appendChild(productItem);
+                    const separator = document.createElement('li');
+                    separator.classList.add('vr-line', 'mb-24');
+                    separator.id = `node_separator${product.id}`;
+                    productList.appendChild(separator);
+                }
+            });
+        }
+        /*else if(action == "SET_QUANTITY"){
+
+        }
+        else if(action == "REMOVE_PRODUCT"){
+            // var itemToRemove = document.getElementById(`node_${product.id}`);
+            // if (itemToRemove) {
+            //     itemToRemove.parentNode.removeChild(itemToRemove);
+            // }
+
+            // var separatorToRemove = document.getElementById(`node_separator${product.id}`);
+            // if (separatorToRemove) {
+            //     separatorToRemove.parentNode.removeChild(separatorToRemove);
+            // }
+        }*/
+        else if(action == "ADD_PRODUCT"){
+            /*let selectedProduct = cart.find(item => item.id == productId);
+            // Check if the product was found
+            if (selectedProduct) {
+                const productItem = document.createElement('li');
+                productItem.classList.add('product-item', 'mb-24');
+                productItem.id = `node_${product.id}`;
+
+                productItem.innerHTML = `
+                    <a href="javascript:void(0);">
+                        <span class="item-image">
+                            <img src="media/products/${product.ref}.png" alt="Product Photo">
+                        </span>
+                    </a>
+                    <div class="product-text">
+                        <a href="javascript:void(0);">
+                            <h6 class="mb-16 dark-gray">${product.name}</h6>
+                        </a>
+                        <div class="qp_row">
+                            <div class="quantity quantity-wrap">
+                                <div class="decrement" onclick="updateProductQuantity(${product.id}, ${product.quantity - 1})"><i class="fa-solid fa-dash"></i></div>
+                                <input type="text" min="1" max="10" name="quantity" value="${product.quantity}" maxlength="2" size="1" class="number" onchange="updateProductQuantity(${product.id}, this.value)">
+                                <div class="increment" onclick="updateProductQuantity(${product.id}, ${product.quantity + 1})"><i class="fa-solid fa-plus-large"></i></div>
+                            </div>
+                            <h5 class="dark-gray">${product.price} FCFA</h5>
+                            <div class="delete-product" onclick="deleteProduct(${product.id})">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                productList.appendChild(productItem);
+                const separator = document.createElement('li');
+                separator.classList.add('vr-line', 'mb-24');
+                separator.id = `node_separator${product.id}`;
+                productList.appendChild(separator);
+            }*/
+        }
+
+        var quantities_by_type = sumQuantitiesByType(cart);
+        // console.log("quantities_by_type", quantities_by_type);
+        montant_livraison = calculate_delivery_amount(quantities_by_type);
+
+        /*var nb_total_gaz = 0;
+        cart.forEach(product => {
+            if(product.id == 3 || product.id == 4){
+                nb_total_gaz += parseInt(product.quantity);
+            }
+        });
+        // console.log(nb_total_gaz);
+
+        if(nb_total_gaz >= 2){
+            montant_livraison += (500 * (nb_total_gaz - 1));
+        }*/
+
+        // Update subtotal montant_livraison
+
+        const subtotal = calculateTotal(montant_livraison);
+        document.querySelector('#montant_livraison').textContent = `${montant_livraison.toLocaleString('fr-FR')} FCFA`;
+        document.querySelector('#montant_total').textContent = `${subtotal.toLocaleString('fr-FR')} FCFA`;
+
+        //Enregistrement du panier dans le stockage local
+        current_cart = {
+            "panier":cart,
+            "telephone": "",
+            "adresse": "",
+            "montant_livraison": montant_livraison
+        }
+
+        localStorage.setItem('current_cart', JSON.stringify(current_cart));
+    }
+
+    function updateLocalStorage(key, fieldName, newValue) {
+        if (localStorage.getItem(key) !== null) {
+            let data = JSON.parse(localStorage.getItem(key));
+            data[fieldName] = newValue;
+            localStorage.setItem(key, JSON.stringify(data));
+        }
+    }
+
+    function sumQuantitiesByType(products) {
+      return products.reduce((accumulator, product) => {
+        if (!accumulator[product.type]) {
+          accumulator[product.type] = 0;
+        }
+        accumulator[product.type] += product.quantity;
+        return accumulator;
+      }, {});
+    }
+    function calculate_delivery_amount(quantities_by_type) {
+        // console.log(Object.keys(quantities_by_type).length, "-----------------")
+        var total_livraison = 1000;
+        var nb_type = 0;
+        for (const type in quantities_by_type) {
+            const total_quantity = quantities_by_type[type];
+            
+            switch (type) {
+                case 'EAU10':
+                    if(total_quantity > 5){
+                        total_livraison += (500 * (Math.ceil(total_quantity / 5) - 1));
+                    }else{
+                        nb_type++;
+                    }
+                break;
+
+                case 'EAU19':
+                    if(total_quantity > 2){
+                        total_livraison += (500 * (Math.ceil(total_quantity / 2) - 1));
+                    }else{
+                        nb_type++;
+                    }
+                break;
+
+                case 'GAZ12':
+                    // console.log("total_quantity GAZ12", total_quantity);
+                    if(total_quantity > 1){
+                        total_livraison += (500 * (Math.ceil(total_quantity / 1) - 1));
+                    }else{
+                        nb_type++;
+                    }
+                break;
+
+                default:
+                    total_livraison += 1000;
+                break;
+            }
+        
+        }
+        // console.log(nb_type, total_livraison);
+        if(nb_type > 0){
+            total_livraison += (500 * (nb_type - 1));
+        }
+        if(Object.keys(quantities_by_type).length == 0)
+            total_livraison = 0;
+      return total_livraison;
+    }
+    // updateLocalStorage('current_cart', 'telephone', 'newTelephoneNumber');
+
+
+    // Example of adding a product when "Add to Cart" button is clicked
+    document.querySelectorAll('.product-button').forEach(button => {
+        button.addEventListener('click', () => {
+            // console.log("clicked");
+            const productCard = button.closest('.product-card');
+            const productId = productCard.dataset.productId;
+            const productType = productCard.dataset.productType;
+            const productRef = productCard.dataset.productRef;
+            const productName = productCard.querySelector('.title').textContent;
+            const productPrice = parseFloat(productCard.querySelector('.price-cart h5').textContent.replace(/\s/g, '').replace('FCFA', ''));
+            const productQuantity = parseInt(productCard.querySelector('.quantity input').value);
+
+            const product = {
+                id: productId,
+                type: productType,
+                ref: productRef,
+                name: productName,
+                price: productPrice,
+                quantity: productQuantity
+            };
+
+            addProduct(product);
+        });
+    });
+
+    // Example of handling checkout when "Checkout" button is clicked
+    document.querySelector('.cus-btn.dark').addEventListener('click', () => {
+        checkout(montant_livraison);
+    });
+
+</script>
+<script src="" async defer></script>
+<script>
+    let map, marker, currentLocation = null;
+    let mapInitialized = false;  // Flag pour vérifier si la carte est initialisée
+
+    // Fonction pour initialiser la carte
+    function initMap() {
+        if (mapInitialized) return;  // Si la carte est déjà initialisée, ne rien faire
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: { lat: 48.8566, lng: 2.3522 }, // Coordonnées par défaut (Paris)
+        });
+
+        // Initialiser le marqueur au centre de la carte
+        marker = new google.maps.Marker({
+            position: map.getCenter(),
+            map: map,
+            title: "Position initiale",
+            draggable: true // Permet de déplacer le marqueur
+        });
+
+        // Écouter le déplacement de la carte et mettre à jour la position du marqueur
+        google.maps.event.addListener(map, 'center_changed', function() {
+            const center = map.getCenter();
+            marker.setPosition(center);
+        });
+
+        mapInitialized = true; // Marque que la carte est initialisée
+    }
+
+    // Fonction pour obtenir la position actuelle de l'utilisateur
+    function getCurrentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                // Initialiser la carte et l'afficher si ce n'est pas déjà fait
+                initMap();
+
+                // Affiche la position actuelle sur la carte
+                currentLocation = userLocation;
+
+                // Afficher la carte
+                document.getElementById('map').style.display = 'block';
+                document.getElementById('address_field').style.display = 'none';
+                $("#adresse").removeAttr("required");
+                $('#type_adresse').prop('checked', false);
+                // $('#sidebar-cart .product-list').css('height', 'calc(100vh - 566px)');
+
+                // Centrer la carte sur la position de l'utilisateur
+                map.setCenter(userLocation);
+
+                // Positionner le marqueur à la position de l'utilisateur
+                marker.setPosition(userLocation);
+                const targetSection = document.querySelector("#cart_content");
+                targetSection.scrollTo({
+                    top: targetSection.scrollHeight,  // Scroll jusqu'en bas de la div
+                    behavior: 'smooth'  // Défilement fluide
+                });
+
+                // Affiche le bouton "Valider"
+                // document.getElementById('validate-position').style.display = 'inline-block';
+            }, function(error) {
+                console.error("Erreur de géolocalisation : ", error);
+            }, {
+                enableHighAccuracy: true,  // Demander à utiliser le GPS pour une meilleure précision
+                timeout: 5000,             // Timeout de 5 secondes pour obtenir la position
+                maximumAge: 0             // Ne pas utiliser une position en cache
+            });
+        } else {
+            alert("La géolocalisation n'est pas supportée par ce navigateur.");
+        }
+    }
+
+    // Fonction pour afficher les coordonnées dans la console
+    function validatePosition() {
+        // Les coordonnées du marqueur (actuellement la position du centre de la carte)
+        const position = marker.getPosition();
+        // console.log("Coordonnées GPS validées : ", position.lat(), position.lng());
+    }
+
+    // Écouteur de clic sur le bouton "Partager ma position"
+    document.getElementById('get-location').addEventListener('click', function() {
+        getCurrentLocation();
+    });
+
+    // Écouteur de clic sur le bouton "Valider"
+    /*document.getElementById('validate-position').addEventListener('click', function() {
+        validatePosition();
+    });*/
+</script>
+<!-- <script type="text/javascript">
+    // Vérifie si le consentement a déjà été donné
+    function checkCookieConsent() {
+        let consent = getCookie("cookieConsent");
+        if (consent !== "") {
+            return true; // Le consentement a déjà été donné
+        } else {
+            return false; // Le consentement n'a pas été donné
+        }
+    }
+
+    // Obtient la valeur d'un cookie par son nom
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1, c.length);
+            }
+            if (c.indexOf(nameEQ) === 0) {
+                return c.substring(nameEQ.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // Sauvegarde le choix de l'utilisateur dans un cookie
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Affiche la bannière de consentement si nécessaire
+    function showCookieBanner() {
+        if (!checkCookieConsent()) {
+            document.getElementById("cookie-consent-banner").style.display = "block";
+        }
+    }
+
+    // Gestion des boutons "Accepter" et "Refuser"
+    document.getElementById("accept-cookies").onclick = function () {
+        setCookie("cookieConsent", "accepted", 365);
+        document.getElementById("cookie-consent-banner").style.display = "none";
+    };
+
+    document.getElementById("decline-cookies").onclick = function () {
+        setCookie("cookieConsent", "declined", 365);
+        document.getElementById("cookie-consent-banner").style.display = "none";
+    };
+
+    // Affiche la bannière lorsque la page est chargée
+    window.onload = function () {
+        showCookieBanner();
+    };
+
+</script> -->
+<!-- 
+                            --
+-->
+<!-- 
+
+    const encryptedCart = CryptoJS.AES.encrypt(JSON.stringify(cart), 'your-secret-key').toString();
+    localStorage.setItem('cart', encryptedCart);
+  -->
