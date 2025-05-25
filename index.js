@@ -16,8 +16,7 @@ app.post('/commande', (req, res) => {
     return res.status(400).json({ message: "Champs manquants" });
   }
 
-  commandes.push({ panier, telephone, adresse, montant_livraison });
-  res.json({ message: "Commande enregistrée avec succès" });
+  res.send("1#@#Commande reçue");
 });
 
 

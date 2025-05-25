@@ -990,18 +990,14 @@
                     data: JSON.stringify(commande), // ✅ on envoie l’objet tel quel
                     contentType: "application/json", // ✅ très important !
                     success: function(msg){
-                        var rep = msg.split("#@#");
-                        if(parseInt(rep[0])==1){
-                            // // console.log("ok, all good");
-                            /*var $body = $("body");
-                            $body.toggleClass("show-sidebar-cart");
-
-                            if ($("#sidebar-cart-curtain").is(":visible")) {
-                                $("#sidebar-cart-curtain").fadeOut(500);
-                            } else {
-                                $("#sidebar-cart-curtain").fadeIn(500);
-                            }*/
-                            swal({ title: "Super !", text: "Votre commande a bien été prise en compte", imageUrl: 'media/success.png', html: true}, function() {location.reload(); });
+                        swal({
+  title: "Super !",
+  text: "Votre commande a bien été prise en compte",
+  imageUrl: 'media/success.png',
+  html: true
+}, function () {
+  location.reload();
+});
                             $(document).click(function(){
                                 // location.reload();
                             });
