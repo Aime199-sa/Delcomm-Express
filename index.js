@@ -9,7 +9,9 @@ if (!process.env.FIREBASE_KEY_JSON) {
   console.error("❌ La variable FIREBASE_KEY_JSON est vide ou non définie !");
   process.exit(1);
 }
-const serviceAccount = require('./serviceAccountKey.json');
+
+// Convertir la chaîne JSON de la variable d'environnement en objet JS
+const serviceAccount = JSON.parse(process.env.FIREBASE_KEY_JSON);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
