@@ -2,6 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const admin = require("firebase-admin");
+const serviceAccount = require("./firebase-key.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+
 
 app.use(cors());
 app.use(express.json());
@@ -11,21 +20,33 @@ let commandes = []; // ← pour stocker les commandes temporairement
 const admin = { username: "admin", password: "admin123" }; // ← à adapter si besoin
 const produits = []; // ← à remplir plus tard si nécessaire
 
-app.post('/commande', (req, res) => {
+app.post('/commande', async (req, res) => {
   console.log("BODY REÇU:", req.body);
 
-  // ✅ On récupère directement les données du body
-  const { panier, telephone, adresse, montant_livraison } = req.body;
+  const { panier, telephone, adresse, montant_livraison, type_adresse, mode_paiement } = req.body;
 
   if (!panier || !telephone || !adresse) {
     return res.status(400).send("0#@#Champs manquants");
   }
 
-  commandes.push({ panier, telephone, adresse, montant_livraison });
+  try {
+    await db.collection("commandes").add({
+      panier,
+      telephone,
+      adresse,
+      montant_livraison,
+      type_adresse,
+      mode_paiement,
+      date: new Date().toISOString()
+    });
 
-  // ✅ Réponse attendue par le frontend
-  res.send("1#@#Commande reçue");
+    res.send("1#@#Commande reçue");
+  } catch (error) {
+    console.error("Erreur Firebase :", error);
+    res.status(500).send("0#@#Erreur serveur");
+  }
 });
+
 
 // ADMIN - Connexion simple
 app.post('/admin/login', (req, res) => {

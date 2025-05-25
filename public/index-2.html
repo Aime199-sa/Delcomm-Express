@@ -890,31 +890,21 @@
     };
     var montant_livraison = 1000;
 
-    $(document).ready(function() {
-        $.ajax({
-            type: "POST",
-            url: "apipub/auth", 
-            data: '',
-            success: function(msg){
-                var rep = msg.split("#@#");
-                if(parseInt(rep[0])==1){
-                    // console.log("t ok");
-                }
-                else{ 
-                    // console.log("something went wrong")
-                }
-                // console.log(msg);
-            },
-            error: function(xhr, status, error) {
-                console.error("Error Details:");
-                console.error("Status: " + status);  // HTTP status code (e.g., 404, 500)
-                console.error("Error: " + error);  // Error message if available
-                console.error("Response Text: " + xhr.responseText);  // The response text from the server
-                alert("An error occurred while processing the request.");
-              }
-            
-        });
-            });
+    $(document).ready(function () {
+    var $body = $("body");
+
+    $(".zones-button, .close-button-zones, #zones-modal-curtain").click(function (e) {
+        e.preventDefault();
+        $body.toggleClass("show-zones-modal");
+
+        if ($("#zones-modal-curtain").is(":visible")) {
+            $("#zones-modal-curtain").fadeOut(500);
+        } else {
+            $("#zones-modal-curtain").fadeIn(500);
+        }
+    });
+});
+
 
     function load(){
         if (localStorage.getItem('current_cart') !== null) {
@@ -964,12 +954,12 @@
 
     function submit_order(){
         var loaderOverlay = document.getElementById("loader-overlay");
-
-    let position = null;
-    if (typeof marker !== 'undefined' && typeof marker.getPosition === 'function') {
-        position = marker.getPosition();
-        if (position.lat() != 48.8566) {
+         if (typeof marker !== 'undefined' && typeof marker.getPosition === 'function') {
+        const position = marker.getPosition();
+        if (position.lat() !== 48.8566) {
             $("#adresse_map").attr("value", `${position.lat()}, ${position.lng()}`);
+        }
+    }
 
             if($("#telephone").val().length > 8 && $('input[name="mode_paiement"]:checked').length > 0 && (($("#adresse").val().length > 2 && $('#type_adresse').prop('checked')) || ($("#adresse_map").attr("value").length > 2 && !$('#type_adresse').prop('checked'))) && cart.length > 0){
                 // console.log("OK, good to go");
@@ -990,21 +980,13 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "apipub/add_order", //process to mail
+                    url: "https://delcomm-express.onrender.com/commande", //process to mail
                     // contentType: "application/json; charset=utf-8",
-                    data: {commande: JSON.stringify(commande)},
+                    data: JSON.stringify(commande), // ✅ on envoie l’objet tel quel
+                    contentType: "application/json", // ✅ très important !
                     success: function(msg){
                         var rep = msg.split("#@#");
                         if(parseInt(rep[0])==1){
-                            // // console.log("ok, all good");
-                            /*var $body = $("body");
-                            $body.toggleClass("show-sidebar-cart");
-
-                            if ($("#sidebar-cart-curtain").is(":visible")) {
-                                $("#sidebar-cart-curtain").fadeOut(500);
-                            } else {
-                                $("#sidebar-cart-curtain").fadeIn(500);
-                            }*/
                             swal({ title: "Super !", text: "Votre commande a bien été prise en compte", imageUrl: 'media/success.png', html: true}, function() {location.reload(); });
                             $(document).click(function(){
                                 // location.reload();
