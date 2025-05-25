@@ -990,14 +990,9 @@
                     data: JSON.stringify(commande), // ✅ on envoie l’objet tel quel
                     contentType: "application/json", // ✅ très important !
                     success: function(msg){
-                        swal({
-  title: "Super !",
-  text: "Votre commande a bien été prise en compte",
-  imageUrl: 'media/success.png',
-  html: true
-}, function () {
-  location.reload();
-});
+                        var rep = msg.split("#@#");
+                        if(parseInt(rep[0])==1){
+                            swal({ title: "Super !", text: "Votre commande a bien été prise en compte", imageUrl: 'media/success.png', html: true}, function() {location.reload(); });
                             $(document).click(function(){
                                 // location.reload();
                             });
