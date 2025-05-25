@@ -37,7 +37,7 @@ const adminCredentials = { username: "admin", password: "admin123" };
 const produits = [];
 
 // ✅ Enregistrement d'une commande
-app.post('/commande', (req, res) => {
+app.post('/commande', async (req, res) => {
   console.log("BODY REÇU:", req.body);
 
   const { panier, telephone, adresse, montant_livraison, type_adresse, mode_paiement } = req.body;
