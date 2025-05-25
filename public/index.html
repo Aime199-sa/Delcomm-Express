@@ -890,27 +890,6 @@
     };
     var montant_livraison = 1000;
 
-    $(document).ready(function() {
-        $.ajax({
-  type: "POST",
-  url: "/commande",
-  contentType: "application/json", // 👈 Obligatoire pour que req.body fonctionne
-  data: JSON.stringify(commande),   // 👈 Tu envoies l'objet brut, pas encapsulé
-  success: function (msg) {
-    // ta logique ici...
-  },
-  error: function (xhr, status, error) {
-    console.error("Error Details:");
-    console.error("Status: " + status);
-    console.error("Error: " + error);
-    console.error("Response Text: " + xhr.responseText);
-    alert("Une erreur est survenue : " + error);
-    loaderOverlay.style.display = "none";
-  }
-});
-
-            });
-
     function load(){
         if (localStorage.getItem('current_cart') !== null) {
             const current_cart = JSON.parse(localStorage.getItem('current_cart'));
