@@ -2,14 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 const admin = require('firebase-admin');
 
 if (!process.env.FIREBASE_KEY_JSON) {
   console.error("❌ La variable FIREBASE_KEY_JSON est vide ou non définie !");
   process.exit(1);
 }
-
-const serviceAccount = JSON.parse(process.env.FIREBASE_KEY_JSON);
+const serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
@@ -21,11 +21,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-let commandes = []; // ← pour stocker les commandes temporairement
-const adminCredentials = { username: "admin", password: "admin123" }; // ← identifiants admin
-const produits = []; // ← à remplir plus tard si nécessaire
+let commandes = [];
+const adminCredentials = { username: "admin", password: "admin123" };
+const produits = [];
 
-// ✅ Route pour passer une commande
 app.post('/commande', async (req, res) => {
   console.log("BODY REÇU:", req.body);
 
@@ -53,7 +52,6 @@ app.post('/commande', async (req, res) => {
   }
 });
 
-// ✅ Connexion admin simple
 app.post('/admin/login', (req, res) => {
   const { username, password } = req.body;
   if (username === adminCredentials.username && password === adminCredentials.password) {
@@ -63,7 +61,6 @@ app.post('/admin/login', (req, res) => {
   }
 });
 
-// ✅ Voir les produits (statique pour l'instant)
 app.get('/api/produits', (req, res) => {
   res.json(produits);
 });
