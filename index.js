@@ -1,27 +1,34 @@
 const express = require('express');
 const cors = require('cors');
+const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
-const axios = require('axios');
 
+// ✅ Stockage local des commandes
+let commandes = [];
+const adminCredentials = { username: "admin", password: "admin123" };
+const produits = [];
+
+// ✅ Fonction pour envoyer la commande via WhatsApp
 async function envoyerCommandeWhatsApp(commande) {
-  const phone = '221781313769'; // ex : 221771234567
-  const apikey = '4157800'; // reçu par WhatsApp
-  
+  const phone = '221781313769'; // ← ton numéro WhatsApp ici
+  const apikey = '4157800'; // ← colle ici la clé reçue par CallMeBot
+
   const message = `🛒 NOUVELLE COMMANDE :
-Nom : ${commande.telephone}
+Téléphone : ${commande.telephone}
 Adresse : ${commande.adresse}
 Livraison : ${commande.montant_livraison} FCFA
-Mode : ${commande.mode_paiement}
+Type d'adresse : ${commande.type_adresse}
+Mode de paiement : ${commande.mode_paiement}
 Produits :
 ${commande.panier.map(p => `- ${p.quantity} x ${p.name}`).join('\n')}
 `;
 
-  const url = `https://api.callmebot.com/whatsapp.php?phone=781313769&text=This+is+a+test&apikey=4157800`;
+  const url = `https://api.callmebot.com/whatsapp.php?phone=${phone}&text=${encodeURIComponent(message)}&apikey=${apikey}`;
 
   try {
     await axios.get(url);
@@ -31,12 +38,7 @@ ${commande.panier.map(p => `- ${p.quantity} x ${p.name}`).join('\n')}
   }
 }
 
-// ✅ Variables mémoire
-let commandes = [];
-const adminCredentials = { username: "admin", password: "admin123" };
-const produits = [];
-
-// ✅ Enregistrement d'une commande
+// ✅ Route pour recevoir une commande
 app.post('/commande', async (req, res) => {
   const { panier, telephone, adresse, montant_livraison, type_adresse, mode_paiement } = req.body;
 
@@ -44,7 +46,6 @@ app.post('/commande', async (req, res) => {
     return res.status(400).send("0#@#Champs manquants");
   }
 
-  // ✅ Crée un objet commande ici
   const commande = {
     panier,
     telephone,
@@ -55,13 +56,9 @@ app.post('/commande', async (req, res) => {
     date: new Date().toISOString()
   };
 
-  // ✅ Tu peux l’enregistrer localement
   commandes.push(commande);
-
-  // ✅ Et ensuite envoyer sur WhatsApp
   await envoyerCommandeWhatsApp(commande);
 
-  // ✅ Réponse attendue par le frontend
   res.send("1#@#Commande reçue");
 });
 
@@ -75,16 +72,17 @@ app.post('/admin/login', (req, res) => {
   }
 });
 
-// ✅ Voir la liste des commandes
+// ✅ Voir toutes les commandes
 app.get('/admin/commandes', (req, res) => {
   res.json(commandes);
 });
 
-// ✅ Voir produits (vide pour l’instant)
+// ✅ Voir les produits
 app.get('/api/produits', (req, res) => {
   res.json(produits);
 });
 
+// ✅ Lancer le serveur
 app.listen(PORT, () => {
   console.log(`Serveur en ligne sur http://localhost:${PORT}`);
 });
